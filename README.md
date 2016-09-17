@@ -84,7 +84,7 @@ Enable Search view.</br>
 ### Step 3 
 Create adapter file.</br>
 
-
+```java
 private class SuggestAdapter extends CursorAdapter {
 
         public SuggestAdapter(Context context, Cursor c) {
