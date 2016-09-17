@@ -11,21 +11,21 @@ You can improve this code, here or of course into your project.</br>
 ###Step 1 
 Add item to menu file.</br>
 
-'''xml
+```xml
 
  <item android:id="@+id/action_search"
         android:title="Search"
         android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
         app:showAsAction="ifRoom|collapseActionView"
         app:actionViewClass="android.support.v7.widget.SearchView" />
-'''
+```
 
 
 ###Step 2
 Enable Search view.</br>
 
 
-'''java
+```java
 
   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -78,7 +78,7 @@ Enable Search view.</br>
         return true;
     }
 
-'''
+```
 
 
 ### Step 3 
@@ -150,12 +150,12 @@ private class SuggestAdapter extends CursorAdapter {
         return matrixCursor;
     }
 
-'''
+```
 
 ### Step 4
 Create Filter.</br>
 
-'''java
+```java
  private class SuggestionProvider implements FilterQueryProvider {
 
         private Cursor cursor;
@@ -188,13 +188,13 @@ Create Filter.</br>
         }
     }
 
-'''
+```
 
 
 ###Step 5 
 BONUS How to create a cursor (if you use your own array).</br>
 
-'''java
+```java
  private MatrixCursor getCursor(List<Product> products) {
 
         final String[] columns = new String[]{_ID, _NAME, _CODE};
@@ -214,7 +214,7 @@ BONUS How to create a cursor (if you use your own array).</br>
         return matrixCursor;
     }
     
-'''
+```
 
 
 
