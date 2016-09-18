@@ -2,10 +2,13 @@
 
 Add a custom suggestion for native Material Design Searchview bar and filter when to use.</br></br>
 
-This is very basic, but help to build a suggestion from your collection doesn't matter where from or type.</br>
+Attention, this code is for help, it isn't a library! So you can take the idea and change or adapt to your need.</br>
 
-You can improve this code, here or of course into your project.</br>
+Things that this code coud help you: </br>
 
+  - Filter for one or more fields.
+  - Create your own list item layout.
+  - Fill suggestion list with your collection.(eg. Array of objects, Strings or others)
 
 
 ###Step 1 
@@ -125,30 +128,6 @@ private class SuggestAdapter extends CursorAdapter {
     }
 
 
-    /**
-     * transform array of object product into MatrixCursor
-     *
-     * @param products
-     * @return
-     */
-    private MatrixCursor getCursor(List<Product> products) {
-
-        final String[] columns = new String[]{_ID, _NAME, _CODE};
-        final Object[] object = new Object[]{"", "", ""};
-
-        final MatrixCursor matrixCursor = new MatrixCursor(columns);
-
-        for (int i = 0; i < products.size(); i++) {
-
-            object[0] = i;
-            object[1] = products.get(i).name;
-            object[2] = products.get(i).code;
-
-            matrixCursor.addRow(object);
-        }
-
-        return matrixCursor;
-    }
 
 ```
 
@@ -195,6 +174,12 @@ Create Filter.</br>
 BONUS How to create a cursor (if you use your own array).</br>
 
 ```java
+/**
+* transform array of object product into MatrixCursor
+*
+* @param products
+* @return
+*/
  private MatrixCursor getCursor(List<Product> products) {
 
         final String[] columns = new String[]{_ID, _NAME, _CODE};
