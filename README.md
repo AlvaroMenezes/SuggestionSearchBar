@@ -10,6 +10,7 @@ Things that this code coud help you: </br>
   - Create your own list item layout.
   - Fill suggestion list with your collection.(eg. Array of objects, Strings or others)
 
+For more details donwload the project for test.I hope it help you.
 
 ###Step 1 
 Add item to menu file.</br>
@@ -200,6 +201,8 @@ BONUS How to create a cursor (if you use your own array).</br>
     }
     
 ```
+##Developed By
+Álvaro Menezes - <alvaromenezes.inf@gmail.com>
 
 
 
